@@ -78,6 +78,13 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Ваш ужин:\n" + comand[2]);
-        }     
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            comand = null;
+            comand = Exchange("127.0.0.1", 8888, $"edit@{day}").Split(new char[] { '#' });
+            MessageBox.Show("Меню изменено");
+        }
     }
 }
